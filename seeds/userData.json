@@ -1,0 +1,17 @@
+[
+    {
+      "username": "El Chuch",
+      "email": "shush@mycelium.studio",
+      "password": "password123"
+    },
+    {
+      "username": "El Beto",
+      "email": "beto@gmail.com",
+      "password": "password123"
+    },
+    {
+      "username": "Drakonian Taco",
+      "email": "drakonian.possum@gmail.com",
+      "password": "password123"
+    }
+  ]

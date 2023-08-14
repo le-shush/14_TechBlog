@@ -1,0 +1,41 @@
+<!-- Container for updating or deleting a post -->
+<div id="form-update-delete" class="container d-flex justify-content-center mt-2" data-post-id={{post.id}}>
+    <div class="row">
+        <div class="col-md-auto">
+            <!-- Form for post modification -->
+            <form action="update/delete" class="border-white border-4">
+                <!-- Header for the form -->
+                <h4 class="bg-slate-900 text-light p-2">Modify Post</h4>
+
+                <!-- Input field for post title -->
+                <div class="mb-3 px-2">
+                    <label class="form-label" for="post-title">Title of Post</label>
+                    <textarea id="postTitle" class="form-control" rows="1">{{post.post_title}}</textarea>
+                </div>
+
+                <!-- Input field for post content -->
+                <div class="mb-3 px-2">
+                    <label for="post-content" class="form-label">Content of Post</label>
+                    <textarea class="form-control" id="postContent" rows="1">{{post.post_content}}</textarea>
+                </div>
+
+                <!-- Container for update and delete buttons -->
+                <div class="container my-4">
+                    <div class="row">
+                        <!-- Update button -->
+                        <div class="col d-flex justify-content-center">
+                            <button id="updateBtn" class="btn btn-outline-primary" type="button">Modify</button>
+                        </div>
+                        <!-- Delete button -->
+                        <div class="col d-flex justify-content-center">
+                            <button id="deleteBtn" class="btn btn-outline-danger" type="button">Remove</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Script for handling post updates -->
+<script src="/js/updatePost.js"></script>

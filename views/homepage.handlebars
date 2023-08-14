@@ -1,0 +1,27 @@
+<!-- Loop through each post to display its content -->
+{{#each posts as |post|}}
+<div class="post container border-slate-950 border-2">
+  <div class="content">
+       <!-- Row for post title and post creator details -->
+       <div class="row bg-slate-700">
+          <!-- Column for post title -->
+          <div class="col">
+            <h2 class="post-title">
+                <!-- Link to the individual post -->
+                <a class="text-light" href="/post/{{post.id}}"> {{post.post_title}} </a>
+            </h2>
+          </div>
+          <!-- Column for post creator details -->
+          <div class="col post-creator d-flex justify-content-end">
+            <p>Authored by {{post.user.username}} on {{format_date post.date_created}} </p>
+          </div>
+       </div>
+       <!-- Display the content of the post -->
+       <div>
+            <p>
+             {{post.post_content}}
+            </p>
+        </div>
+  </div>
+</div>
+{{/each}}

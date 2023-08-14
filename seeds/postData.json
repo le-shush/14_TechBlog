@@ -1,0 +1,12 @@
+[
+    {
+        "post_title": "SOme example of a title here",
+        "post_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        "user_id": "1"
+    },
+    {
+        "post_title": "Some other title here",
+        "post_content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+        "user_id": "2"
+    }
+]

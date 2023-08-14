@@ -1,0 +1,42 @@
+<!-- Container for the signup form with relative positioning -->
+<div class="position-relative sngForm text-light">
+    <!-- Centered dark background box for the signup form -->
+    <div class="px-2 bg-neutral-800 position-absolute top-50 start-50 translate-middle">
+        <div>
+            <!-- Signup form with action pointing to "signup" -->
+            <form action="signup" id="sign-form">
+                <!-- Signup form header -->
+                <h2>Register</h2>
+                
+                <!-- Username input field -->
+                <div class="mb-3">
+                    <label class="form-label" for="username">Username</label>
+                    <input id="username-sign" class="form-control" type="text">
+                </div>
+                
+                <!-- Email input field -->
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email Address</label>
+                    <input id="email-sign" type="text" class="form-control">
+                </div>
+                
+                <!-- Password input field -->
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input id="password-sign" type="password" class="form-control">
+                </div>
+                
+                <!-- Signup button centered in the form -->
+                <div class="d-flex justify-content-center pb-2">
+                    <button type="submit" class="btn btn-light">Register</button>
+                </div>
+                
+                <!-- Link to the login page -->
+                <p><a class="link-offset-2 link-underline link-underline-opacity-0" href="/login">Have an account? Sign in</a></p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Script for handling signup functionalities -->
+<script src="/js/signup.js"></script>
