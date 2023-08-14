@@ -1,5 +1,5 @@
 <!-- Container for the "New Post" button -->
-<div class="container flex justify-center">
+<div class="container mx-auto flex justify-center">
     <div>
         <!-- "New Post" button -->
         <button type="button" id="new-post"
@@ -11,11 +11,11 @@
 
 <!-- Loop through each post and display its title and date created -->
 {{#each posts as |post|}}
-<div class="container flex justify-center mt-3 text-center">
+<div class="container mx-auto flex justify-center mt-3 text-center">
     <div class="flex items-center">
-        <div class="border border-slate-950 rounded-md p-2">
+        <div class="border border-gray-800 rounded-md p-2">
             <!-- Link to edit the post -->
-            <a href="/editpost/{{post.id}}" class="text-slate-900 hover:opacity-50 no-underline">
+            <a href="/editpost/{{post.id}}" class="text-gray-900 hover:opacity-50 no-underline">
                 <h3>{{post.post_title}}</h3>
             </a>
             <!-- Display the date the post was created -->
@@ -27,22 +27,22 @@
 
 <!-- Hidden container for the new post form -->
 <div id="none-div" class="hidden">
-    <div class="container text-center flex justify-center border border-slate-950 mt-3 bg-neutral-800 text-white">
+    <div class="container mx-auto text-center flex justify-center border border-gray-800 mt-3 bg-gray-700 text-white">
         <!-- Form for adding a new post -->
         <form action="new-post" class="new-post" id="new-post-form">
             <!-- Input field for post title -->
             <div class="mb-3">
-                <label for="project-title" class="block text-sm font-medium leading-5 text-neutral-700">Title of Post</label>
-                <input type="text" class="mt-1 form-input block w-full" id="project-title">
+                <label for="project-title" class="block text-sm font-medium leading-5 text-gray-300">Title of Post</label>
+                <input type="text" class="mt-1 p-2 border rounded-md w-full" id="project-title">
             </div>
             <!-- Textarea for post content -->
             <div class="mb-3">
-                <label for="post-content" class="block text-sm font-medium leading-5 text-neutral-700">Content of Post</label>
-                <textarea class="mt-1 form-input block w-full" id="post-content" rows="5"></textarea>
+                <label for="post-content" class="block text-sm font-medium leading-5 text-gray-300">Content of Post</label>
+                <textarea class="mt-1 p-2 border rounded-md w-full" id="post-content" rows="5"></textarea>
             </div>
             <!-- Submit button for the form -->
             <div class="mb-3">
-                <button type="submit" class="bg-neutral-300 hover:bg-neutral-400 text-slate-950 font-bold py-2 px-4 rounded">
+                <button type="submit" class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded">
                     Send
                 </button>
             </div>

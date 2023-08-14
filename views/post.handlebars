@@ -1,16 +1,16 @@
 <!-- Container for the main post -->
-<div class="post container border border-slate-950" id="current-post" data-post-id= {{post.id}} >
+<div class="post container mx-auto border border-gray-800" id="current-post" data-post-id= {{post.id}} >
     <div class="content">
         <!-- Row for post title and post creator details -->
-        <div class="row bg-slate-700">
+        <div class="flex bg-gray-700">
             <!-- Column for post title -->
-            <div class="col">
-                <h2 class="post-title text-light"> 
+            <div class="flex-1">
+                <h2 class="post-title text-white"> 
                     {{post.post_title}}
                 </h2>  
             </div>
             <!-- Column for post creator details -->
-            <div class="col post-creator d-flex justify-content-end">
+            <div class="flex-1 flex justify-end post-creator">
                 <p>Authored by {{post.user.username}} on {{format_date post.date_created}} </p>
             </div>
         </div>
@@ -25,19 +25,19 @@
 
 <!-- Loop through each comment to display its content -->
 {{#each comments as |comment|}}
-    <div class="container Sborder-primmary border-2 my-4">
+    <div class="container mx-auto border border-primary-500 border-2 my-4">
         <div class="content">
             <!-- Row for comment author and comment date -->
-            <div class="row bg-slate-950">
+            <div class="flex bg-gray-800">
                 <!-- Column for comment author -->
-                <div class="col">
-                    <h4 class="text-slate-950">
+                <div class="flex-1">
+                    <h4 class="text-gray-800">
                         {{comment.user.username}}
                     </h4>
                 </div>
                 <!-- Column for comment date -->
-                <div class="col text-slate-950 d-flex justify-content-end">
-                    <p style="font-size: 13px;"> {{format_date comment.date_create}} </p>
+                <div class="flex-1 text-gray-800 flex justify-end">
+                    <p class="text-xs"> {{format_date comment.date_create}} </p>
                 </div>
             </div>
             <!-- Display the content of the comment -->
@@ -50,27 +50,27 @@
 
 <!-- Display "New Comment" button if the user is logged in -->
 {{#if logged_in}}
-<div class="container d-flex justify-content-center my-3">
+<div class="container mx-auto flex justify-center my-3">
     <div class=""> 
-        <button type="button" id="new-comment">+ Add Comment</button>
+        <button type="button" id="new-comment" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">+ Add Comment</button>
     </div>
 </div>
 {{/if}}
 
 <!-- Hidden container for the new comment form -->
-<div id="hidden-div" style="display: none">
-    <div id="comment-form" class="form container border border-neutral-800 border-3 my-3">
-        <div class="row ">
-            <div class="bg-slate-950"><h2>j</h2></div>
+<div id="hidden-div" class="hidden">
+    <div id="comment-form" class="form container mx-auto border border-gray-700 border-3 my-3">
+        <div class="flex">
+            <div class="bg-gray-800 w-full"><h2 class="text-white">j</h2></div>
             <!-- Form for adding a new comment -->
-            <form action="new-comment" id="new-comment-form">
-            <label for="comment">Your Thoughts</label>
+            <form action="new-comment" id="new-comment-form" class="w-full">
+            <label for="comment" class="block text-sm font-medium leading-5 text-gray-600">Your Thoughts</label>
             <div class="mb-2">
-                <textarea id="content" class="form-control" rows="3"></textarea>
+                <textarea id="content" class="w-full p-2 border rounded-md" rows="3"></textarea>
             </div>
             <!-- Submit button for the form -->
-            <div class="mb-3 d-flex justify-content-center">
-                <button type="submit" class="btn btn-slate-950">Post</button>
+            <div class="mb-3 flex justify-center">
+                <button type="submit" class="bg-gray-800 text-white px-4 py-2 rounded">Post</button>
             </div>
         </form>
         </div>
@@ -79,3 +79,4 @@
 
 <!-- Script for handling new comment functionalities -->
 <script src="/js/newCom.js"></script>
+

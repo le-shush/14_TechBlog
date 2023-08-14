@@ -1,7 +1,7 @@
 <!-- Container for the signup form with relative positioning -->
-<div class="position-relative sngForm text-light">
+<div class="relative sngForm text-white">
     <!-- Centered dark background box for the signup form -->
-    <div class="px-2 bg-neutral-800 position-absolute top-50 start-50 translate-middle">
+    <div class="px-2 bg-gray-800 absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
         <div>
             <!-- Signup form with action pointing to "signup" -->
             <form action="signup" id="sign-form">
@@ -10,29 +10,29 @@
                 
                 <!-- Username input field -->
                 <div class="mb-3">
-                    <label class="form-label" for="username">Username</label>
-                    <input id="username-sign" class="form-control" type="text">
+                    <label class="block mb-1" for="username">Username</label>
+                    <input id="username-sign" class="w-full p-2 border rounded-md" type="text">
                 </div>
                 
                 <!-- Email input field -->
                 <div class="mb-3">
-                    <label for="email" class="form-label">Email Address</label>
-                    <input id="email-sign" type="text" class="form-control">
+                    <label class="block mb-1" for="email">Email Address</label>
+                    <input id="email-sign" type="text" class="w-full p-2 border rounded-md">
                 </div>
                 
                 <!-- Password input field -->
                 <div class="mb-3">
-                    <label for="password" class="form-label">Password</label>
-                    <input id="password-sign" type="password" class="form-control">
+                    <label class="block mb-1" for="password">Password</label>
+                    <input id="password-sign" type="password" class="w-full p-2 border rounded-md">
                 </div>
                 
                 <!-- Signup button centered in the form -->
-                <div class="d-flex justify-content-center pb-2">
-                    <button type="submit" class="btn btn-light">Register</button>
+                <div class="flex justify-center pb-2">
+                    <button type="submit" class="bg-white text-black px-4 py-2 rounded">Register</button>
                 </div>
                 
                 <!-- Link to the login page -->
-                <p><a class="link-offset-2 link-underline link-underline-opacity-0" href="/login">Have an account? Sign in</a></p>
+                <p><a class="underline hover:no-underline" href="/login">Have an account? Sign in</a></p>
             </form>
         </div>
     </div>
